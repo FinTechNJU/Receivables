@@ -17,6 +17,9 @@ class Receivables:
         self.debtor=debtor
         self.creditor=creditor
 
+    def __str__(self):
+        return "[应收账款的序号:%s, 应还日期:%s, 金额:%d, 债务人:%s , 债权人:%s]" % (rid,date,qty,debtor,creditor)
+
 
 class RecPricing(Receivables):
     """对应收账款的定价，被定价之后的应收账款
@@ -47,7 +50,7 @@ class RecPricing(Receivables):
         if self.recourse:
             return 
         else :
-            return
+            return self.expect_payment-self.time_discount-self.liquidity_discount
 
 
 
