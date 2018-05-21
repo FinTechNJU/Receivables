@@ -30,11 +30,18 @@ class RecPricing(Receivables):
     def __str__(self):
         return 
 
+    #无追索权#
     def expect_payment(self):
-        # 
+        #还款风险价值：计算期望还款金额和实际有效还款期
         return 
 
-    def 
+    def time_discount(self):
+        #时间价值折现：现金流折现
+        return 
+    def liquidity_discount(self):
+        #流动性价值折现：现金流动性的期权价值分析
+        return
+    #无追索权#
 
     def price(self):
         if self.recourse:
